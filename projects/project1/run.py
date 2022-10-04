@@ -3,6 +3,7 @@ import importlib
 
 from pacman_module.pacman import runGame
 
+# python run.py --agent dfs --layout
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

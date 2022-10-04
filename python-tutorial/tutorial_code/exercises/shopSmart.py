@@ -23,6 +23,12 @@ For orders:  [('apples', 3.0)] best shop is shop2
 from __future__ import print_function
 import shop
 
+def imin(lst):
+    mini = min(lst)
+    for i in range (0, len(lst)):
+        if lst[i] == mini:
+            return i
+                    
 
 def shopSmart(orderList, fruitShops):
     """
@@ -30,7 +36,11 @@ def shopSmart(orderList, fruitShops):
         fruitShops: List of FruitShops
     """
     "*** YOUR CODE HERE ***"
-    return None
+    sumList = []
+    for fruitShop in fruitShops:
+        sumList += [fruitShop.getPriceOfOrder(orderList)]
+    return fruitShops[imin(sumList)]
+            
 
 
 if __name__ == '__main__':
